@@ -26,7 +26,7 @@ const path = require('path')
 
 contextBridge.exposeInMainWorld('electron', {
   startDrag: (fileName) => {
-    ipcRenderer.send('ondragstart', path.join(process.cwd(), fileName))
+    ipcRenderer.send('dragstart', path.join(process.cwd(), fileName))
   }
 })
 ```
